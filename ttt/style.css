@@ -1,0 +1,67 @@
+body {
+    font-family: arial;
+}
+
+.status-text, .new-game-text {
+    font-weight: bold;
+    color: #444444;
+}
+
+.new-game-text {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.status {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.game-field {
+  font-family: arial;
+  width: 192px;
+  height: 192px;
+  margin: 0px auto;
+  padding: 0px;
+  font-size: 0px;
+}
+
+.row div {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 60px;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+
+.first div:nth-child(2), .third div:nth-child(2) {
+    border-left: 6px solid #eeeeee;
+    border-right: 6px solid #eeeeee;
+}
+
+.second div:nth-child(odd) {
+    border-top: 6px solid #eeeeee;
+    border-bottom: 6px solid #eeeeee;
+}
+
+.second div:nth-child(2) {
+    border: 6px solid #eeeeee;
+}
+
+.X {
+    color: #ea4c89;
+}
+
+.O {
+    color: #444444;
+}
+
+.win-square {
+    background-color: #fafafa;
+}
