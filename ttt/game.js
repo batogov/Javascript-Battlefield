@@ -1,3 +1,5 @@
+"use strict";
+
 var board = [];
 var isNewGame = true;
 var currentPlayer = 'X';
@@ -24,9 +26,8 @@ function updateBoard(i, player) {
 
 
 function checkForWin(player) {
-    if (player == 'X') {
-        sign = 1;
-    } else {
+    var sign = 1;
+    if (player == 'O') {
         sign = -1;
     }
 
@@ -66,14 +67,14 @@ function newGame() {
 
         // обнуляем все отметки ходов
         for (var i = 0; i <= 8; i++) {
-            square = document.getElementById(i);
+            var square = document.getElementById(i);
             square.textContent = '';
             square.className = '';
         }
 
         currentPlayer = 'X';
 
-        statusText = document.querySelector('.status-text');
+        var statusText = document.querySelector('.status-text');
 
         statusText.className = 'status-text ' + currentPlayer;
         statusText.textContent = 'Начало игры! Первым ходит «' + currentPlayer + '»';
@@ -104,21 +105,21 @@ function squareClick(square) {
 
         updateBoard(i, currentPlayer);
 
-        win = checkForWin(currentPlayer);
+        var win = checkForWin(currentPlayer);
 
         if (win != false) {
-            statusText = document.querySelector('.status-text');
+            var statusText = document.querySelector('.status-text');
             statusText.textContent = 'Победил «' + currentPlayer + '».';
             document.querySelector('.new-game-text').style.display = 'inline-block';
 
             for (var i in win) {
-                square = document.getElementById(win[i]);
+                var square = document.getElementById(win[i]);
                 square.classList.add("win-square");
             }
 
             isNewGame = true;
         } else if (checkForTie() === true) {
-            statusText = document.querySelector('.status-text');
+            var statusText = document.querySelector('.status-text');
             statusText.textContent = 'Ничья!';
             statusText.className = 'status-text';
             document.querySelector('.new-game-text').style.display = 'inline-block';
@@ -127,7 +128,7 @@ function squareClick(square) {
         } else {
             changeCurrentPlayer();
 
-            statusText = document.querySelector('.status-text');
+            var statusText = document.querySelector('.status-text');
             statusText.className = 'status-text ' + currentPlayer;
             statusText.textContent = 'Сейчас ходит «' + currentPlayer + '»';
         }
