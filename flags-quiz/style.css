@@ -1,0 +1,63 @@
+.flag-image {
+    width: 398px;
+    height: 298px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+button {
+    display: inline-block;
+    height: 50px;
+    width: 195px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 0px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'PT Sans', sans-serif;
+    outline: none;
+    cursor: pointer;
+}
+
+button:nth-child(2n) {
+    margin-right: 0px;
+}
+
+.quiz-layout {
+    margin: 0 auto;
+    width: 400px;
+    font-size: 0px;
+}
+
+.status {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: #cccccc;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-family: 'PT Sans', serif;
+}
+
+h1 {
+    font-family: 'PT Serif', serif;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-family: 'PT Serif', serif;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#new-game-button {
+    width: 398px;
+}
